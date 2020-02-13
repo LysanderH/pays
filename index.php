@@ -12,11 +12,11 @@ $capitales = [
         'capitale' => 'berlin',
         'drapeau' => 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg'
     ],
-    'united-kingdom' => [
+    'united kingdom' => [
         'capitale' => 'london',
         'drapeau' => 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg'
     ],
-    'united-states' => [
+    'united states' => [
         'capitale' => 'washington d.c.',
         'drapeau' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg'
     ],
@@ -71,7 +71,7 @@ if (isset($_GET['select'])) {
         </p>
     <?php else: ?>
         <p>
-            La capitale de <?= ucfirst($selected); ?> est <?= ucfirst($capitales[$selected]['capitale']); ?>
+            La capitale de <?= ucwords($selected); ?> est <?= ucwords($capitales[$selected]['capitale']); ?>
         </p>
         <?php if ($capitales[$selected]['drapeau']): ?>
             <img src="<?= $capitales[$selected]['drapeau']; ?>" alt="Drapeau de <?= strtoupper($selected); ?>"
